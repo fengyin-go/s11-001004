@@ -23,7 +23,9 @@ app.add_middleware(
 )
 
 for module in ROUTERS:
-    app.include_router(module.router)
+    # 列表里既有业务模块（取 module.router），也有直接登记的 APIRouter 实例
+    router = getattr(module, "router", module)
+    app.include_router(router)
 
 
 @app.get("/api/health")

@@ -24,5 +24,7 @@ from app.routers import pipeline as router_pipeline
 from app.routers import storage as router_storage
 from app.routers import monitor as router_monitor
 from app.routers import scheduler as router_scheduler
+from app.routers.batch_workspace import receipt_router as router_batch_receipts
+from app.routers.batch_workspace import router as router_batch_workspace
 
-ROUTERS = [router_collector, router_crawlrule, router_parser, router_increment, router_ratelimit, router_retry, router_rpaflow, router_captcha, router_proxy, router_session, router_router, router_validate, router_dedup, router_format, router_pipeline, router_storage, router_monitor, router_scheduler]
+ROUTERS = [router_collector, router_crawlrule, router_parser, router_increment, router_ratelimit, router_retry, router_rpaflow, router_captcha, router_proxy, router_session, router_router, router_validate, router_dedup, router_format, router_pipeline, router_storage, router_monitor, router_scheduler, router_batch_workspace, router_batch_receipts]
